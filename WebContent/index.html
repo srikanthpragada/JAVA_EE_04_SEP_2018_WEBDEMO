@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Course Details</title>
+<link rel="stylesheet" href="styles.css" />
+<script>
+	function showFee() {
+		var fee = document.getElementById("fee")
+		fee.innerText = "4500 INR"
+	}
+</script>
+</head>
+<body>
+	<h1>Java EE Course</h1>
+	This course is to teach how to build web and enterprise apps using Java
+	EE and related frameworks like Hibernate and Spring.
+	<p></p>
+	<div class="highlight">42 classes and six days a week.</div>
+	<h2>Topics</h2>
+	The following are important topics:
+	<ul>
+		<li>JDBC</li>
+		<li>Servlets</li>
+		<li>JSP</li>
+		<li>AJAX</li>
+		<li>Hibernate</li>
+		<li>Spring</li>
+	</ul>
+
+	<button onclick="showFee()">Show Course Fee</button>
+	<h3 style="color: maroon" id="fee"></h3>
+
+</body>
+</html>
