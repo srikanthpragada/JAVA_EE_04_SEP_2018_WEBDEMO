@@ -5,17 +5,15 @@
 <title>Interest</title>
 </head>
 <body>
-<h1>Interest Calculation</h1>
-<form action="interest">
-Amount <br/>
-<input type="number" name="amount" />
-<p></p>
-Period (Months) <br/>
-<input type="number" name="period" />
-<p></p>
-<input type="submit" value="Calculate" />
+	<h1>Interest Calculation</h1>
+	<form action="interest" method="post">
+		Amount <br /> <input type="number" name="amount" required />
+		<p></p>
+		Period (Months) <br /> <input type="number" name="period" required />
+		<p></p>
+		<input type="submit" value="Calculate" />
 
-</form>
+	</form>
 
 </body>
 </html>
