@@ -8,18 +8,15 @@
     <servlet-name>MessageServlet</servlet-name>
     <servlet-class>servlets.MessageServlet</servlet-class>
     <init-param>
-       <param-name>message</param-name>
-       <param-value>Failing to plan is planning to fail!</param-value>
+      <param-name>message</param-name>
+      <param-value>Failing to plan is planning to fail!</param-value>
     </init-param>
   </servlet>
-  
   <servlet-mapping>
-     <servlet-name>MessageServlet</servlet-name>
-     <url-pattern>/message</url-pattern>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/message</url-pattern>
   </servlet-mapping>
-  
   <session-config>
-     <session-timeout>5</session-timeout>
+    <session-timeout>5</session-timeout>
   </session-config>
-  
 </web-app>
