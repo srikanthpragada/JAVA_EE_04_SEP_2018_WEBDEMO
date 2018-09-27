@@ -11,7 +11,7 @@ import javax.sql.rowset.CachedRowSet;
 
 import oracle.jdbc.rowset.OracleCachedRowSet;
 
-@WebListener
+// @WebListener
 public class MyListener implements ServletContextListener, HttpSessionListener {
 	public void sessionCreated(HttpSessionEvent se) {
 		System.out.println("sessionCreated()");
