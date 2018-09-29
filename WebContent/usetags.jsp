@@ -10,7 +10,6 @@
 <body>
 	<h2>
 		<st:now />
-		<st:today />
 	</h2>
 </body>
 </html>
