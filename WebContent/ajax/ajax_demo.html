@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ajax Demo</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+function getAverage() {
+    $.get("average_salary.jsp",{},showAverage)
+}
+
+function showAverage(result) {
+	$("#avg").html(result)
+}
+</script>
+</head>
+<body>
+<button onclick="getAverage()">Show Average Salary</button>
+<h2 id="avg"></h2>
+<h2></h2>
+</body>
+</html>
