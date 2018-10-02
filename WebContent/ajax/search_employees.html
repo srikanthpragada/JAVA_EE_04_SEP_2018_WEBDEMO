@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Employees</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	function search() {
+		$.getJSON("search_employees.jsp", {
+			"name" : $("#name").val()
+		}, showEmployees)
+	}
+
+	function showEmployees(employees) {
+		$.each(employees,
+				function(idx,emp) {
+			      console.log(emp.name)
+		        }
+		);
+	}
+</script>
+</head>
+<body>
+	<h2>Search Employees</h2>
+	Name :
+	<input type="text" id="name" />
+	<button onclick="search()">Search</button>
+	<table>
+	</table>
+
+</body>
+</html>
