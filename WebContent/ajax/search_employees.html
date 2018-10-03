@@ -5,16 +5,24 @@
 <title>Search Employees</title>
 <script src="jquery-3.3.1.min.js"></script>
 <script>
+
+    $(document).ready( function() {
+    	$("#result").hide()
+    })
 	function search() {
-		$.getJSON("search_employees.jsp", {
+		$.getJSON("/webdemo/employeeSearch", {
 			"name" : $("#name").val()
 		}, showEmployees)
 	}
 
 	function showEmployees(employees) {
+		$("#emps").text("")
+		$("#result").show()
 		$.each(employees,
 				function(idx,emp) {
-			      console.log(emp.name)
+			      $("#emps").append("<tr><td>" + emp.name + "</td><td>" 
+			    		  + emp.job + "</td><td>" + emp.dept + "</td><td>" +
+			    		     emp.salary + "</td></tr>");
 		        }
 		);
 	}
@@ -23,9 +31,11 @@
 <body>
 	<h2>Search Employees</h2>
 	Name :
-	<input type="text" id="name" />
-	<button onclick="search()">Search</button>
-	<table>
+	<input type="text" id="name" autocomplete="flase" onkeyup="search()" />
+	<p/>
+    <table width="100%" cellpadding="5" id="result" border="1">
+	  <tr><th>Name </th><th>Job</th><th>Department </th><th>Salary</th></tr>
+	  <tbody id="emps"></tbody>
 	</table>
 
 </body>

@@ -6,7 +6,7 @@
 	url="jdbc:oracle:thin:@localhost:1521:XE" user="hr" password="hr" />
 
 <sql:query var="result" dataSource="${oracle}">
-    select first_name name, salary , job_id job, department_id dept
+    select first_name name, salary , job_id job, nvl(department_id,0) dept
     from employees
     where first_name like ?
     <sql:param value='%${param.name}%' ></sql:param>
@@ -16,7 +16,7 @@
    {"name" : "${emp.name}",
     "salary" : ${emp.salary}, 
      "job" : "${emp.job}", 
-     "department" : ${emp.dept}}
+     "dept" : ${emp.dept}}
      <c:if test="${!vs.last}">,</c:if>
 </c:forEach>
 ]
